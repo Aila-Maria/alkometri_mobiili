@@ -51,7 +51,7 @@ function Calculate(){
       />
       <Text>Male</Text>
       <Text>Female</Text>
-      <Text>Result</Text>
+      <Text></Text>
       <Button title='calculate'
       onPress={() => setResult(resultM)}/>
     </View>
