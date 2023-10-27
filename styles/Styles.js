@@ -53,7 +53,12 @@ const BasicStyle = StyleSheet.create({
     thumbEnabledColor:'#f69f9f',
     thumbDisabledColor:'#ffffff',
     trackEnabledCOlor:'#631e1e',
-    trackDisabledColor:'#ffffff'
+    trackDisabledColor:'#ffffff',
+    radioButton:{
+        flexDirection:'row',
+        alignItems:'center',
+        
+    }
 })
 
 const DarkStyle = StyleSheet.create({

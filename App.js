@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Button, Pressable, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { BasicStyle, DarkStyle } from './styles/Styles';
+import { RadioButton } from 'react-native-paper';
 
 
 export default function App() {
@@ -60,19 +61,23 @@ function Calculate() {
         onChangeText={text => setWeight(text)}
       />
       <Text style={currentStyle.label}>Bottles</Text>
-      <TextInput style={BasicStyle.textInput}
-        keyboardType='number-pad'
-        placeholder='Enter bottles'
-        onChangeText={text => setBottles(text)}
-      />
+      
       <Text style={currentStyle.label}>Hours</Text>
       <TextInput style={BasicStyle.textInput}
         keyboardType='number-pad'
         placeholder='Enter hours'
         onChangeText={text => setTime(text)}
       />
-      <Text style={currentStyle.label}>Male</Text>
-      <Text style={currentStyle.label}>Female</Text>
+      <RadioButton.Group value={sex} onValueChange={v => setSex(v)}>
+      <View style={currentStyle.radioButton}>
+        <RadioButton value = 'Male'/>
+        <Text style={currentStyle.label}>Male</Text>
+        </View>
+        <View style={currentStyle.radioButton}>
+        <RadioButton value = 'Female'/>
+        <Text style={currentStyle.label}>Female</Text>
+        </View>
+      </RadioButton.Group>
       <Text style={currentStyle.result}></Text>
       <TouchableOpacity onPress={() => console.log("Submit")}>
         <Text style={currentStyle.submit}>Calculate</Text>
