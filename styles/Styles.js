@@ -7,10 +7,9 @@ const BasicStyle = StyleSheet.create({
         borderRadius:10,
         margin:10,
         padding:15,
-        
     },
     header:{
-        fontSize:24,
+        fontSize:30,
         fontWeight:'bold',
         color:'#340505',
         paddingBottom: 10,
@@ -20,6 +19,7 @@ const BasicStyle = StyleSheet.create({
     label:{
         color:'#631e1e',
         fontSize:18,
+        fontWeight:'bold',
         paddingLeft: 10
     },
     textInput:{
@@ -29,7 +29,8 @@ const BasicStyle = StyleSheet.create({
         padding:10,
         margin:10,
         marginTop:5,
-        fontSize:18
+        fontSize:18,
+        backgroundColor:'#fdfbfb'
     },
     result:{
         paddingLeft:10,
@@ -48,6 +49,36 @@ const BasicStyle = StyleSheet.create({
         textAlign:'center',
         fontSize: 22,
         fontWeight:'bold'
+    },
+    thumbEnabledColor:'#f69f9f',
+    thumbDisabledColor:'#ffffff',
+    trackEnabledCOlor:'#631e1e',
+    trackDisabledColor:'#ffffff'
+})
+
+const DarkStyle = StyleSheet.create({
+    container:{
+        ...BasicStyle.container,
+        backgroundColor:'#252424'
+    },
+    header:{
+        ...BasicStyle.header,
+        color:'#f69f9f'
+    },
+    label:{
+        ...BasicStyle.label,
+        color:'#f69f9f'
+    },
+    textInput:{
+        ...BasicStyle.textInput
+    },
+    result:{
+        ...BasicStyle.result
+    },
+    submit:{
+        ...BasicStyle.submit,
     }
 })
-export{BasicStyle};
+
+
+export{BasicStyle, DarkStyle};
