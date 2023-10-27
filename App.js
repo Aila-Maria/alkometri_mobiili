@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, Pressable, ScrollView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { BasicStyle, DarkStyle } from './styles/Styles';
 import { RadioButton } from 'react-native-paper';
+import NumericInput from 'react-native-numeric-input';
 
 
 export default function App() {
@@ -25,6 +26,7 @@ function Calculate() {
   const [result, setResult] = useState(0);
   const [isEnabled, setIsEnabled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [num, setNum] = useState(0);
 
 
   const currentStyle = darkMode ? DarkStyle : BasicStyle;
@@ -61,13 +63,32 @@ function Calculate() {
         onChangeText={text => setWeight(text)}
       />
       <Text style={currentStyle.label}>Bottles</Text>
-      
+        <NumericInput
+        value={num}
+        onChange={v => setNum(v)}
+        minValue={0}
+        maxValue={10}
+        borderColor={currentStyle.numBorColor}
+        leftButtonBackgroundColor={currentStyle.lBBColor}
+        rightButtonBackgroundColor={currentStyle.rBBColor}
+        iconStyle={currentStyle.iStyleColor}
+        rounded={true}
+        containerStyle={currentStyle.numBackgroundColor}
+        />
       <Text style={currentStyle.label}>Hours</Text>
-      <TextInput style={BasicStyle.textInput}
-        keyboardType='number-pad'
-        placeholder='Enter hours'
-        onChangeText={text => setTime(text)}
-      />
+      <NumericInput
+        value={num}
+        onChange={v => setNum(v)}
+        minValue={0}
+        maxValue={10}
+        borderColor={currentStyle.numBorColor}
+        leftButtonBackgroundColor={currentStyle.lBBColor}
+        rightButtonBackgroundColor={currentStyle.rBBColor}
+        iconStyle={currentStyle.iStyleColor}
+        rounded={true}
+        containerStyle={currentStyle.numBackgroundColor}
+        
+        />
       <RadioButton.Group value={sex} onValueChange={v => setSex(v)}>
       <View style={currentStyle.radioButton}>
         <RadioButton value = 'Male'/>

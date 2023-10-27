@@ -20,7 +20,9 @@ const BasicStyle = StyleSheet.create({
         color:'#631e1e',
         fontSize:18,
         fontWeight:'bold',
-        paddingLeft: 10
+        paddingLeft: 10,
+        paddingBottom:5,
+        paddingTop:10
     },
     textInput:{
         paddingLeft:10,
@@ -57,8 +59,19 @@ const BasicStyle = StyleSheet.create({
     radioButton:{
         flexDirection:'row',
         alignItems:'center',
-        
+    },
+    iStyleColor:{
+        color:'#f69f9f'
     }
+    ,
+    lBBColor: '#631e1e',
+    rBBColor:'#631e1e',
+    numBorColor: 'black',
+    numBackgroundColor:{
+        backgroundColor:'#ffffff'
+    }
+
+
 })
 
 const DarkStyle = StyleSheet.create({
@@ -82,7 +95,19 @@ const DarkStyle = StyleSheet.create({
     },
     submit:{
         ...BasicStyle.submit,
-    }
+    },
+    radioButton:{
+        ...BasicStyle.radioButton,
+    },
+    iStyleColor:{
+        color:'#631e1e'
+    },
+    numBackgroundColor:{
+        ...BasicStyle.numBackgroundColor
+    },
+    lBBColor: '#f69f9f',
+    rBBColor:'#f69f9f',
+
 })
 
 
