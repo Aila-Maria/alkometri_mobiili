@@ -3,10 +3,10 @@ const { StyleSheet } = require("react-native");
 const BasicStyle = StyleSheet.create({
     container: {
         backgroundColor:'#f69f9f',
-        borderWidth: 1,
-        borderRadius:10,
         margin:10,
         padding:15,
+        borderWidth: 1,
+        borderRadius:10,
     },
     header:{
         fontSize:30,
@@ -39,7 +39,9 @@ const BasicStyle = StyleSheet.create({
         padding:10,
         margin:10,
         marginTop:5,
-        fontSize:18
+        fontSize:28,
+        textAlign:"center",
+        
     },
     submit:{
         borderWidth:1,
@@ -59,6 +61,7 @@ const BasicStyle = StyleSheet.create({
     radioButton:{
         flexDirection:'row',
         alignItems:'center',
+        paddingTop: 10,
     },
     iStyleColor:{
         color:'#f69f9f'
@@ -71,13 +74,19 @@ const BasicStyle = StyleSheet.create({
         backgroundColor:'#ffffff'
     }
 
-
 })
+const Colors= {
+    color1:'#05fa1e',
+    color2:'#eafa0d',
+    color3:'#f50c0c'
+}
+
+
 
 const DarkStyle = StyleSheet.create({
     container:{
         ...BasicStyle.container,
-        backgroundColor:'#252424'
+        backgroundColor:'#272525'
     },
     header:{
         ...BasicStyle.header,
@@ -91,7 +100,8 @@ const DarkStyle = StyleSheet.create({
         ...BasicStyle.textInput
     },
     result:{
-        ...BasicStyle.result
+        ...BasicStyle.result,
+        color:'#ffffff'
     },
     submit:{
         ...BasicStyle.submit,
@@ -108,7 +118,8 @@ const DarkStyle = StyleSheet.create({
     lBBColor: '#f69f9f',
     rBBColor:'#f69f9f',
 
+
 })
 
 
-export{BasicStyle, DarkStyle};
+export{BasicStyle, DarkStyle, Colors};
