@@ -51,10 +51,10 @@ function Calculate() {
     }
     else {
       if(sex == 'Male'){
-        result = grams / (weight * 0.7);
+        result = gramsLeft / (weight * 0.7);
       }
       else{
-        result = grams / (weight * 0.6);
+        result = gramsLeft / (weight * 0.6);
 
       }
       if (result < 0){
